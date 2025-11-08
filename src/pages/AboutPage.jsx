@@ -1,5 +1,6 @@
 import React from "react";
 import { Clock, Flame, Heart } from "lucide-react";
+import aboutImg from "../assets/about.png"; // <-- import image
 
 const ValueCard = ({ icon, title, children }) => (
   <div className="flex items-start space-x-4">
@@ -19,7 +20,6 @@ const AboutPage = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-poppins uppercase text-dark-text">
             Our Story
@@ -29,12 +29,11 @@ const AboutPage = () => {
           </p>
         </div>
 
-        {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="flex justify-center">
             <img
-              src="src/assets/about.png"
+              src={aboutImg}
               alt="Belle Food Chef"
               className="w-full max-w-md md:max-w-lg lg:max-w-xl max-h-[400px] object-cover rounded-2xl shadow-2xl transition-transform duration-500 hover:scale-105"
             />
